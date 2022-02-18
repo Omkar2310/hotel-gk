@@ -1,0 +1,14 @@
+<div *ngIf="currentMenu.length == 0">
+    Loading
+    <app-loader></app-loader>
+</div>
+<!-- <button (click)="getCartDetail()">Cart</button> -->
+<div *ngIf="currentMenu.length > 0">
+    <app-menu-card class="grid-prod" (addToCardClicked)="addToCart($event)"></app-menu-card>
+</div>
+
+<!-- <hr />
+<p>Firestore</p>
+<div *ngIf="menuFetched.length > 0">
+    <app-menu-card (addToCardClicked)="addToCart($event)"></app-menu-card>
+</div> -->

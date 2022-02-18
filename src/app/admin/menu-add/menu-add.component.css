@@ -1,0 +1,9 @@
+.heading-menu-add {
+    text-align: center;
+}
+
+.menu-add-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}

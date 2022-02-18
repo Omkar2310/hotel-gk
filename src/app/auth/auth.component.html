@@ -1,0 +1,45 @@
+<div class="row d-flex justify-content-center">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+        <div class="alert alert-danger" *ngIf="error">
+            <p>{{ error }}</p>
+        </div>
+        <div *ngIf="isLoading">
+            <app-loader></app-loader>
+        </div>
+        <div class="google-signin">
+            <button type="button" class="loginBtn loginBtn--google" *ngIf="(afAuth.authState | async) === null" (click)="onGoogleSignIn()">
+        Sign In Google
+      </button>
+            <button type="button" *ngIf="afAuth.authState | async" (click)="signOut()">
+        Logout
+      </button>
+        </div>
+        <hr />
+        <form #authForm="ngForm" (ngSubmit)="onAuthForm(authForm)" *ngIf="!isLoading">
+            <div class="form-group" *ngIf="!isLoginMode">
+                <label for="email">Name</label>
+                <input type="text" name="name" id="name" class="form-control" ngModel required />
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="form-control" ngModel required email />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control" ngModel required minlength="6" />
+            </div>
+            <br />
+            <div>
+                <button class="btn btn-primary" type="submit" [disabled]="!authForm.valid">
+          {{ isLoginMode ? "Login" : "Sign Up" }}
+        </button> |
+                <button type="button" class="btn btn-primary" (click)="onSwitchMode()">
+          Switch to {{ isLoginMode ? "Sign Up" : "Login" }}
+        </button>
+            </div>
+
+            <br />
+        </form>
+    </div>
+    <div *ngIf="afAuth.authState | async">Welcome {{ user.name }}</div>
+</div>

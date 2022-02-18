@@ -1,0 +1,11 @@
+.contact {
+    padding: 15px;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.social-address {
+    font-size: 24px;
+}

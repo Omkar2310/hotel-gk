@@ -1,0 +1,6 @@
+{
+    "hosting": {
+        "public": "./dist/hotel-gk",
+        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    }
+}

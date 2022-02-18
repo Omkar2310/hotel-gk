@@ -1,0 +1,14 @@
+<div *ngFor="let menu of currentMenu; let i = index" class="section-menu container">
+    <div class="meal">
+        <img src="{{ menu.imageLink }}" class="meal-img" />
+        <div>
+            <p class="meal-title">{{ menu.name }}</p>
+            <ul class="meal-attributes">
+                <li class="meal-attribute">{{ "&#8377; " + menu.price }}</li>
+                <li class="meal-attribute">
+                    <button class="add-to-cart" (click)="onAddToCart(i)">Add</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

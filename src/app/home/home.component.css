@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap");
+* {
+    margin: 0;
+    font-family: "Glory", sans-serif;
+}
+
+.container {
+    height: 600px;
+    padding: 10px 15px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.primary-text {
+    color: #45260a;
+    font-size: 56px;
+    line-height: 1.2;
+}
+
+.secondary-text {
+    font-size: 24px;
+}
+
+.order-now-btn {
+    width: max-content;
+    font-size: 24px;
+    background-color: #e97713;
+    border-radius: 9px;
+    color: white;
+    font-weight: 500;
+}
+
+.row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.main-menulist {
+    font-family: "Glory", sans-serif;
+    font-size: 24px;
+    line-height: 2;
+    list-style: none;
+    font-weight: bold;
+}
+
+hr {
+    margin-top: 20px;
+    height: 10px;
+    color: #130901;
+}
